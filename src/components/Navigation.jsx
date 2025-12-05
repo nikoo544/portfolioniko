@@ -8,7 +8,7 @@ export default function Navigation() {
 
   return (
     <nav className="nav-container">
-      <div className="logo">ARTIST</div>
+      <div className="logo">NIKO</div>
       <div className="links">
         <Link to="/" className={`nav-link ${isActive('/')}`}>Home</Link>
         <Link to="/manga" className={`nav-link ${isActive('/manga')}`}>Manga</Link>
