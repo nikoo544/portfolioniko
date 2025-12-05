@@ -3,14 +3,26 @@ export const portfolioData = {
         {
             id: 1,
             title: "Chapter 1 Cover",
-            image: "/images/manga/sample1.jpg", // Replace with your file name
-            description: "The beginning of the journey."
+            image: "/images/manga/sample1.jpg",
+            description: "The beginning of the journey.",
+            pages: [
+                "/images/manga/sample1.jpg",
+                "/images/manga/sample1.jpg",
+                "/images/manga/sample1.jpg",
+                "/images/manga/sample1.jpg",
+                "/images/manga/sample1.jpg"
+            ]
         },
         {
             id: 2,
             title: "Character Sketch",
             image: "/images/manga/sample2.png",
-            description: "Concept art for the main protagonist."
+            description: "Concept art for the main protagonist.",
+            pages: [
+                "/images/manga/sample2.png",
+                "/images/manga/sample2.png",
+                "/images/manga/sample2.png"
+            ]
         }
     ],
     illustration: [

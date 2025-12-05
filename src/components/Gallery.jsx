@@ -10,7 +10,7 @@ const CloseIcon = () => (
     </svg>
 );
 
-export default function Gallery({ items }) {
+export default function Gallery({ items, onItemClick }) {
     const [selectedImage, setSelectedImage] = useState(null);
 
     // Disable right click globally when modal is open
@@ -31,7 +31,7 @@ export default function Gallery({ items }) {
                         className="gallery-item"
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
-                        onClick={() => setSelectedImage(item)}
+                        onClick={() => onItemClick ? onItemClick(item) : setSelectedImage(item)}
                         onContextMenu={(e) => e.preventDefault()} // Prevent right click
                         style={{
                             backgroundImage: `url(${item.image})`,

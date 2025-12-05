@@ -1,3 +1,4 @@
+import { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import Navigation from './components/Navigation'
@@ -9,6 +10,8 @@ import Manga from './pages/Manga'
 import Illustration from './pages/Illustration'
 import Digital from './pages/Digital'
 import './components/LiquidTransition.css'
+
+const AsteroidsGame = lazy(() => import('./components/AsteroidsGame'));
 
 function AnimatedRoutes() {
   const location = useLocation();
