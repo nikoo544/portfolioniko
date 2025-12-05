@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { AnimatePresence } from 'framer-motion'
 import Navigation from './components/Navigation'
 import Background3D from './components/Background3D'
+import SocialBar from './components/SocialBar'
+import CustomCursor from './components/CustomCursor'
 import Home from './pages/Home'
 import Manga from './pages/Manga'
 import Illustration from './pages/Illustration'
@@ -24,8 +26,10 @@ function AnimatedRoutes() {
 function App() {
   return (
     <Router>
+      <CustomCursor />
       <Background3D />
       <Navigation />
+      <SocialBar />
       <AnimatedRoutes />
     </Router>
   )
