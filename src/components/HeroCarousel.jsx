@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { getAssetPath } from '../utils/imageUtils';
 
 const images = [
     "/images/manga/sample1.jpg",
@@ -43,7 +44,7 @@ export default function HeroCarousel() {
                     }}
                 >
                     <motion.img
-                        src={images[index]}
+                        src={getAssetPath(images[index])}
                         alt="Hero Art"
                         initial={{ scale: 1.1 }}
                         animate={{ scale: 1 }}

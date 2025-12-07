@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
-
+import { getAssetPath } from '../utils/imageUtils';
 
 // Simple Close Icon if lucide is not installed
 const CloseIcon = () => (
@@ -34,7 +34,7 @@ export default function Gallery({ items, onItemClick }) {
                         onClick={() => onItemClick ? onItemClick(item) : setSelectedImage(item)}
                         onContextMenu={(e) => e.preventDefault()} // Prevent right click
                         style={{
-                            backgroundImage: `url(${item.image})`,
+                            backgroundImage: `url(${getAssetPath(item.image)})`,
                             backgroundSize: 'cover',
                             backgroundPosition: 'center',
                             cursor: 'zoom-in'
@@ -72,7 +72,7 @@ export default function Gallery({ items, onItemClick }) {
 
                             <div className="image-container" onContextMenu={(e) => e.preventDefault()}>
                                 <img
-                                    src={selectedImage.image}
+                                    src={getAssetPath(selectedImage.image)}
                                     alt={selectedImage.title}
                                     style={{ pointerEvents: 'none', userSelect: 'none' }} // Disable drag and select
                                 />

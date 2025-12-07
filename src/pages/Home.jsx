@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { portfolioData } from '../data/projects';
+import { getAssetPath } from '../utils/imageUtils';
 
 export default function Home() {
     // Combine all works into a single array
@@ -38,7 +39,7 @@ export default function Home() {
                         onContextMenu={(e) => e.preventDefault()} // Disable right-click
                     >
                         <img
-                            src={work.image}
+                            src={getAssetPath(work.image)}
                             alt={work.title}
                             loading="lazy"
                             draggable="false" // Disable drag

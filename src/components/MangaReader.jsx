@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import { getAssetPath } from '../utils/imageUtils';
 
 // Icons (Simple SVGs to avoid dependencies)
 const Icons = {
@@ -117,7 +118,7 @@ export default function MangaReader({ pages = [], onClose, title }) {
                         {pages.map((page, index) => (
                             <img
                                 key={index}
-                                src={page}
+                                src={getAssetPath(page)}
                                 alt={`Page ${index + 1}`}
                                 style={{ width: '100%', display: 'block', marginBottom: '10px' }}
                                 loading="lazy"
@@ -138,14 +139,14 @@ export default function MangaReader({ pages = [], onClose, title }) {
                         {/* Left Page (actually next page in manga) */}
                         {pages[currentPage + 1] && window.innerWidth > 768 && (
                             <img
-                                src={pages[currentPage + 1]}
+                                src={getAssetPath(pages[currentPage + 1])}
                                 style={{ maxHeight: '90vh', maxWidth: '45vw', objectFit: 'contain' }}
                             />
                         )}
                         {/* Right Page (current page) */}
                         {pages[currentPage] && (
                             <img
-                                src={pages[currentPage]}
+                                src={getAssetPath(pages[currentPage])}
                                 style={{ maxHeight: '90vh', maxWidth: '90vw', objectFit: 'contain' }}
                             />
                         )}

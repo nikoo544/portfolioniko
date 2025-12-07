@@ -1,10 +1,11 @@
 import { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import Navigation from './components/Navigation'
 import ClickEffects from './components/ClickEffects'
 import SocialBar from './components/SocialBar'
 import CustomCursor from './components/CustomCursor'
+import Background3D from './components/Background3D'
 import Home from './pages/Home'
 import Manga from './pages/Manga'
 import Illustration from './pages/Illustration'
@@ -78,6 +79,7 @@ function App() {
   return (
     <Router>
       <CustomCursor />
+      <Background3D />
       <ClickEffects />
       <Navigation />
       <SocialBar />
