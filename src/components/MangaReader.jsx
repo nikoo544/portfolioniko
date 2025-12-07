@@ -107,14 +107,13 @@ export default function MangaReader({ pages = [], onClose, title }) {
                     flex: 1,
                     overflowY: mode === 'vertical' ? 'auto' : 'hidden',
                     display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
+                    flexDirection: 'column', // Explicit column for better scroll handling in vertical mode
                     height: '100%'
                 }}
             >
                 {mode === 'vertical' ? (
                     // Vertical Cascade Mode
-                    <div style={{ maxWidth: '800px', width: '100%', padding: '80px 0' }}>
+                    <div style={{ maxWidth: '800px', width: '100%', padding: '80px 0', margin: '0 auto' }}>
                         {pages.map((page, index) => (
                             <img
                                 key={index}

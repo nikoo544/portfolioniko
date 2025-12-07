@@ -14,6 +14,7 @@ export default function Navigation() {
         <Link to="/manga" className={`nav-link ${isActive('/manga')}`}>Manga</Link>
         <Link to="/illustration" className={`nav-link ${isActive('/illustration')}`}>Illustration</Link>
         <Link to="/digital" className={`nav-link ${isActive('/digital')}`}>Digital</Link>
+        <Link to="/about" className={`nav-link ${isActive('/about')}`}>About</Link>
       </div>
     </nav>
   );

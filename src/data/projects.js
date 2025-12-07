@@ -2,28 +2,47 @@ export const portfolioData = {
     manga: [
         {
             id: 1,
-            title: "Chapter 1 Cover",
+            title: "DR Dragon 2024",
             image: "/images/manga/sample1.jpg",
             description: "The beginning of the journey.",
             pages: [
-                "/images/manga/sample1.jpg",
-                "/images/manga/sample1.jpg",
-                "/images/manga/sample1.jpg",
-                "/images/manga/sample1.jpg",
-                "/images/manga/sample1.jpg"
+                "/images/manga/dragon1.png",
             ]
         },
         {
             id: 2,
             title: "Character Sketch",
-            image: "/images/manga/sample2.png",
+            image: "/images/manga/sample2.jpg",
             description: "Concept art for the main protagonist.",
             pages: [
-                "/images/manga/sample2.png",
-                "/images/manga/sample2.png",
-                "/images/manga/sample2.png"
+                "/images/manga/sample2.jpg",
+                "/images/manga/sample2.jpg",
+                "/images/manga/sample2.jpg"
+            ]
+        },
+        {
+            id: 2,
+            title: "Character Sketch",
+            image: "/images/manga/sample2.jpg",
+            description: "Concept art for the main protagonist.",
+            pages: [
+                "/images/manga/sample2.jpg",
+                "/images/manga/sample2.jpg",
+                "/images/manga/sample2.jpg"
+            ]
+        },
+        {
+            id: 2,
+            title: "Character Sketch",
+            image: "/images/manga/sample2.jpg",
+            description: "Concept art for the main protagonist.",
+            pages: [
+                "/images/manga/sample2.jpg",
+                "/images/manga/sample2.jpg",
+                "/images/manga/sample2.jpg"
             ]
         }
+
     ],
     illustration: [
         {

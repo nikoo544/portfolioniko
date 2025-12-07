@@ -11,7 +11,9 @@ import Illustration from './pages/Illustration'
 import Digital from './pages/Digital'
 import './components/LiquidTransition.css'
 
-const AsteroidsGame = lazy(() => import('./components/AsteroidsGame'));
+
+
+import About from './pages/About'
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -23,6 +25,7 @@ function AnimatedRoutes() {
         <Route path="/manga" element={<Manga />} />
         <Route path="/illustration" element={<Illustration />} />
         <Route path="/digital" element={<Digital />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </AnimatePresence>
   );
